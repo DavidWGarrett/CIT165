@@ -1,0 +1,21 @@
+package chapter5;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int k = 2;
+		nPrint("A message", k);
+		System.out.println(k);
+
+	}
+	
+	static void nPrint(String message, int n) {
+		while (n > 0) {
+		System.out.print(message);
+		n--;
+		}
+		}
+
+}

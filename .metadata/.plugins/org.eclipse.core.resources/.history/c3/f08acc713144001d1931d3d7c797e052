@@ -1,0 +1,29 @@
+package chapter3;
+
+// This program should use if statements to output the highest of two numbers
+public class Chapter3 
+{
+	public static void main(String args[])
+	{
+		Scanner input = new Scanner(System.in);
+		int number1;
+		int number2; 
+		int highest = 0;
+		
+		System.out.print("Enter in the first number: ");
+		number1 = input.nextInt();
+		System.out.print("Enter in the second number: ");
+		number2 = input.nextInt();
+
+		if(number1 < number2)
+		{
+			highest = number1;
+		}
+		else
+		{
+			number2 = highest;
+		}
+		
+		System.out.println("The highest value is: " + highest);
+	}
+}

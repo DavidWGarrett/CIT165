@@ -1,0 +1,10 @@
+package ch8;
+
+public class cH8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

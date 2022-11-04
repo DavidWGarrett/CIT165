@@ -1,0 +1,32 @@
+/*
+ * David Garrett
+ * Chapter 1 Test
+ * 10-4-2022
+ */
+
+/*
+ * The purpose of the program is to print "Hello" to the console.
+ * 
+ * Three problems
+ * 
+ * 1. On line ##, changed the asterisk to a forward slash. This changes the
+ * the comment from a multi-line comment to a single line. This prevents
+ * the code underneath from being commented out.
+ * 
+ * 2. On line ##, added a quotation mark before Hello. Encompassing Hello
+ * with quotation marks makes it a string and able to be printed out
+ * 
+ * 3. On line ##, system was capitalized. Classes need to be capitalized.
+ */
+
+package chapter1_Test;
+
+public class Chapter1
+{
+	// On the line below, changed asterisk to forward slash
+	// This program prints a greeting 
+	public static void main(String args[])
+	{
+		System.out.println("Hello"); // Added quotation mark, capitalize System
+	}
+}

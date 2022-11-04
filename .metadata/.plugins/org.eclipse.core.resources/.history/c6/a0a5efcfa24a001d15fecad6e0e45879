@@ -1,0 +1,34 @@
+package chapter6;
+import java.util.Scanner;
+
+public class Lab1 
+{
+	public static void main(String[] args)
+	{
+		double radius, height, surfaceArea;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter in the radius of your cylindric object: ");
+		radius = input.nextDouble();
+		
+		System.out.print("Enter in the height of your cylindric object: ");
+		height = input.nextDouble();
+		
+		surfaceArea = findSurfaceAreaCylinder(radius, height);
+		
+		System.out.printf("\nThe area of your object is: %f", surfaceArea);
+		
+	}
+	
+	public static double findSurfaceAreaCylinder(double radius, double height)
+	
+	{
+		double surfaceArea;
+		double pi = 3.14;
+		
+		surfaceArea = (2 * radius * radius * pi) + (height * 2 * radius * pi);
+		
+		return surfaceArea;
+	}
+
+}

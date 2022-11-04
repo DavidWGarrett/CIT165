@@ -1,0 +1,10 @@
+package chapter1_Test;
+
+public class Chapter1
+{
+	// This program prints a greeting 
+	public static void main(String args[])
+	{
+		System.out.println("Hello"); // Added quotation mark
+	}
+}

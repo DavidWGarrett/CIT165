@@ -1,0 +1,16 @@
+package chapter5;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		double sum = 0;
+		for (double d = 0; d < 10; sum += sum + d) {
+		d += 0.1;
+		System.out.println(d);
+		}
+
+	}
+
+}

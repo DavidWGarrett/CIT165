@@ -1,0 +1,18 @@
+package chapter2_1;
+
+public class Chapter2_1
+//Demonstrates modulus and printing
+{
+	public static void main(String args[])
+	{
+		int a = 99;
+		int b = 8;
+		int result;
+		double c = 3.14; // Changed from int to double
+		result = a % b;
+		System.out.println("Divide " + a + " by " + b); // Added +
+		System.out.println("remainder is " + result); // Changed from c to result
+		System.out.print("c is the value of PI:");
+		System.out.println(c);
+	}
+}

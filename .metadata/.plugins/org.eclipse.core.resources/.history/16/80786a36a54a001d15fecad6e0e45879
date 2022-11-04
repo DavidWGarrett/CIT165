@@ -1,0 +1,47 @@
+/*
+ * Your name here
+ * Chapter 6, Lab 2
+ * Current date here
+ */
+
+package chapter6_debug;
+
+import java.util.Scanner;
+
+public class Chapter6_debug
+{
+
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		int inputValue = 0;
+		int result = 0;
+		
+		System.out.println("This program will deconstruct an integer into individual digits and then sum those digits together!");
+		System.out.print("\nEnter the integer to deconstruct and sum: ");
+		inputValue = input.nextInt();
+		
+		//System.out.printf("\nThe sum of the digits in the integer %d is %d", inputValue, result);
+		
+		result = sumTheDigits(inputValue); // Added "result = " before "sumTheDigits(inputValue"
+		
+		// Moved this line below previous line
+		System.out.printf("\nThe sum of the digits in the integer %d is %d", inputValue, result);
+	}
+	
+	public static int sumTheDigits(int digitsToSum)
+	{
+		int currentDigit;
+		int sum = 0;
+		
+		currentDigit = digitsToSum % 10;
+		while(digitsToSum > 0)
+		{
+			sum += currentDigit;
+			digitsToSum /= 10;
+			currentDigit = digitsToSum % 10;
+		}
+		return sum; // Changed from currentDigit to sum
+	}
+
+}
