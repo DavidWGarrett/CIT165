@@ -14,6 +14,21 @@ import java.util.Scanner;
  * values inside of the multidimensional array 
  */
 
+/*
+ * METHODS
+ * 
+ * inputInventory: Creates two-dimensional array. Rows are car companies. Columns are dealers.
+ * Ask user to fill in number
+ * 
+ * printInventory: Takes in two-dimensional array with values. Uses those values to print
+ * a formated table
+ * 
+ * inventoryMessage: Takes in an integer that corresponds to a car company. Returns a string
+ * of the name of that car company. Used for printf statements when asking for inventory and
+ * printing out table. Ford = 0, Chevy = 1, Dodge = 2.
+ * 
+ */
+
 public class Lab1 
 {
 	// Used to initialize the array
