@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Phaze\Downloads\Chapter9_debug"/>
+			<item value="C:\Users\Phaze\Downloads\Chapter8_debug"/>
 			<item value="C:\Users\Phaze\Downloads\chap6_1"/>
 			<item value="C:\Users\Phaze\Downloads\cc5.1"/>
 			<item value="C:\Users\Phaze\Downloads\chpt4_1"/>
