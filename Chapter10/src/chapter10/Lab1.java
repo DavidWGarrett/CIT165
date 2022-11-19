@@ -22,41 +22,23 @@ public class Lab1 {
 	
 	public static void main(String[] args) {
 		
-		Scanner input = new Scanner(System.in);
-
-		// Initialize an array of objects
+		// Initialize an array of object reference variables
 		Loan[] loans = new Loan[NUMBER_OF_LOANS];
 		
-		// Increment through each object in the array
+		// Increment through each element in the array
 		for (int i = 0; i < Array.getLength(loans); i++)
 		{
-			
-			double loanAmount;
-			double interestRate;
-			int loanLength;
-			
-			// Ask user to input loan amount, interest rate, and length of loan
-			System.out.printf("Loan %d\n", i+1);
-			System.out.print("Loan Amount    : ");
-			loanAmount = input.nextDouble();
-			System.out.print("Interest Rate  : ");
-			interestRate = input.nextDouble();
-			System.out.print("Length of Loan : ");
-			loanLength = input.nextInt();
-			System.out.print("\n");
-			
-
-			// Initialize object with the information user inputed 
-			loans[i] = new Loan(i+1, loanAmount, interestRate, loanLength);
+			// Instantiate new object in the array. 
+			// createLoan method asks user to input information
+			loans[i] = createLoan(i+1);
 		}
 		
 		// Increment through each object in the array
-		for (int i = 0; i < Array.getLength(loans); i++)
+		for (Loan loan : loans)
 		{
 			// Display loan information an
-			
-			loans[i].displayLoanDetails();
-			loans[i].displayInterestPaid();
+			loan.displayLoanDetails();
+			loan.displayInterestPaid();
 		}
 	}
 	
@@ -79,9 +61,7 @@ public class Lab1 {
 		loanLength = input.nextInt();
 		System.out.print("\n");
 		
-		input.close();
-		
-		// Initialize object with the information user inputed 
+		// Instantiate object with the information user inputed 
 		loan = new Loan(loanNumber, loanAmount, interestRate, loanLength);
 		return loan;
 	}

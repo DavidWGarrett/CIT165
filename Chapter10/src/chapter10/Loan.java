@@ -1,3 +1,9 @@
+/*
+ * David Garrett
+ * Chapter 10 Lab 1
+ * 11-18-22
+ */
+
 package chapter10;
 
 public class Loan {
@@ -6,8 +12,10 @@ public class Loan {
 	private int loanLengthInYears;
 	private double annualInterestRate;
 	
+	// Default constructor. Unused.
 	Loan() {}
 	
+	// Constructor. Sets all the private variables.
 	Loan(int loanNumber, double loanAmount, double annualInterestRate, int loanLengthInYears)
 	{
 		setLoanNumber(loanNumber);
@@ -77,21 +85,13 @@ public class Loan {
 	}
 	
 	public void displayInterestPaid()
-	{
-		// returns no values and calculates and displays 
-		// the total amount of interest paid on the loan 
-		// if the payee only pays the minimum amount required 
-		// by the monthlyPayment 
-		
+	{	
 		double interestPaid;
-		double monthlyInterestRate = annualInterestRate / 12;
-		int loanLengthInMonths = loanLengthInYears * 12;
-		double monthlyPayment;
-		monthlyPayment = (loanAmount * monthlyInterestRate) / 
-				( 1 - Math.pow(1 + monthlyInterestRate, -loanLengthInMonths));
 		
-		interestPaid = (monthlyPayment * loanLengthInMonths) - loanAmount;
+		// Finds interest if only minimum payments paid
+		interestPaid = (this.calculateMonthlyPayment() * loanLengthInYears * 12) - loanAmount;
+		
+		// Prints interest out
 		System.out.printf("The total interest paid will be $%.2f.\n", interestPaid);	
 	}
-
 }
