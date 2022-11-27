@@ -10,9 +10,9 @@ public class StoredItem
 	protected double cost;
 	protected int prices[][];
 
-	StoredItem() {}
+	public StoredItem() {}
 	
-	StoredItem(char storage, int volume, int prices[][])
+	public StoredItem(char storage, int volume, int prices[][])
 	{
 		if (storage == 'o' | storage == 'i' | storage == 'r')
 			setStorageType(storage);

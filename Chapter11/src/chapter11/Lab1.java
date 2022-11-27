@@ -7,8 +7,9 @@ public class Lab1 {
 	public static void main(String[] args) 
 	{
 		int[][] prices = {{4, 9, 20},
-				             {8, 18, 50},
-				             {20, 60, 200}};
+				          {8, 18, 50},
+				          {20, 60, 200}};
+		
 		int[] securityPrices = {50, 20, 20};
 		
 		boolean security = false;
@@ -40,20 +41,21 @@ public class Lab1 {
 		System.out.print("How many cubic meters of storage is required? ");
 		volume = input.nextInt();
 		
+		StoredItem item;
+		
 		if (security)
 		{
-			StoredItem item = new secureStoredItem(storage, volume, prices, securityPrices);
-			item.calculateCost();
-			System.out.println(item);
-			System.out.println();
+			item = new secureStoredItem(storage, volume, prices, securityPrices);
 		}
-		
 		else
 		{
-			StoredItem item = new StoredItem(storage, volume, prices);
-			item.calculateCost();
-			System.out.println(item);
-			System.out.println();
+			item = new StoredItem(storage, volume, prices);
 		}
+		
+		item.calculateCost();
+		System.out.println(item);
+		System.out.println();
+		
+		item = null;
 	}
 }

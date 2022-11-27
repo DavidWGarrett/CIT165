@@ -8,9 +8,9 @@ public class secureStoredItem extends StoredItem
 	private int security[];
 	private Double securityCost;
 
-	secureStoredItem() {}
+	public secureStoredItem() {}
 
-	secureStoredItem(char storage, int volume, int prices[][], int security[])
+	public secureStoredItem(char storage, int volume, int prices[][], int security[])
 	{
 		super(storage, volume, prices);
 		setSecurity(security);
