@@ -6,24 +6,30 @@ public class Lab1 {
 
 	public static void main(String[] args) 
 	{
-		Scanner input = new Scanner(System.in);
-		char storageType;
-		int volume;	
-		double[][] prices = {{4, 9, 20},
+		int[][] prices = {{4, 9, 20},
 				             {8, 18, 50},
 				             {20, 60, 200}};
+		int[] securityPrices = {50, 20, 20};
+		
+		boolean security = false;
 		
 		System.out.println("Testing a couple of storedItem objects");
 		for (int i = 0; i < 3; i++)
 		{
-			boolean security = false;
-			testItems(prices, security);
+			testItems(prices, securityPrices, security);
 		}
 		
+		security = true;
+		
+		System.out.println("Testing a couple of secureStoredItem objects");
+		for (int i = 0; i < 3; i++)
+		{
+			testItems(prices, securityPrices, security);
+		}
 
 	}
 	
-	public static void testItems(double prices[][], boolean security)
+	public static void testItems(int prices[][], int securityPrices[], boolean security)
 	{
 		Scanner input = new Scanner(System.in);
 		char storage;
@@ -31,12 +37,15 @@ public class Lab1 {
 		
 		System.out.print("What type of Storage is required? ");
 		storage = input.next().charAt(0);
-		System.out.print("How many cubic meters of storage is required?" );
+		System.out.print("How many cubic meters of storage is required? ");
 		volume = input.nextInt();
 		
 		if (security)
 		{
-			
+			StoredItem item = new secureStoredItem(storage, volume, prices, securityPrices);
+			item.calculateCost();
+			System.out.println(item);
+			System.out.println();
 		}
 		
 		else
@@ -45,9 +54,6 @@ public class Lab1 {
 			item.calculateCost();
 			System.out.println(item);
 			System.out.println();
-			item = null;
 		}
-		
 	}
-
 }

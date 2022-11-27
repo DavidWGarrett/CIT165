@@ -5,14 +5,14 @@ import java.util.Arrays;
 
 public class StoredItem 
 {
-	private char storageType;
-	private int volume;
-	private double cost;
-	private double prices[][];
+	protected char storageType;
+	protected int volume;
+	protected double cost;
+	protected int prices[][];
 
 	StoredItem() {}
 	
-	StoredItem(char storage, int volume, double prices[][])
+	StoredItem(char storage, int volume, int prices[][])
 	{
 		if (storage == 'o' | storage == 'i' | storage == 'r')
 			setStorageType(storage);
@@ -46,11 +46,11 @@ public class StoredItem
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	public double[][] getPrices() 
+	public int[][] getPrices() 
 	{
 		return prices;
 	}
-	public void setPrices(double[][] prices) 
+	public void setPrices(int[][] prices) 
 	{
 		this.prices = prices;
 	}
@@ -72,7 +72,7 @@ public class StoredItem
 		}
 		else
 		{
-			for (indexVolume = volumeList.size()-1; indexVolume < 0; indexVolume--)
+			for (indexVolume = volumeList.size()-1; indexVolume > 0; indexVolume--)
 			{
 				if (volume > volumeList.get(indexVolume))
 				{
@@ -86,8 +86,8 @@ public class StoredItem
 
 	public String toString()
 	{
-		return "Storage Type: " + this.getStorageType() + "\nVolume: " 
-	           + String.valueOf(this.getVolume()) + "\nCost: " 
-			   + String.valueOf(this.getCost());
+		return "Storage Type:   " + this.getStorageType() + "\nVolume:         " 
+	           + String.valueOf(this.getVolume()) + "\nCost:           $" 
+			   + String.format("%.2f", this.getCost());
 	}
 }
