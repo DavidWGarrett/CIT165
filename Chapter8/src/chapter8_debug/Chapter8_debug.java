@@ -14,7 +14,7 @@ public class Chapter8_debug
 {
 	public static void main(String[] args)
 	{
-		int[][] data = {{2,1,0},{8,4,3},{6,7,4}};
+		int[][] data = {{2,1,0},{8,4,3},{6,7,4}}; // Added two curly brackets
 		int[] largestItemIndexes;
 		
 		printMatrix(data);

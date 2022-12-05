@@ -1,12 +1,12 @@
 /*
- *  Your name here
- * Chapter 11, Lab 2
- * Current date here
+ * David Garrett
+ * Chapter 11 Lab 2
+ * 12-4-22
  */
 
 package chapter11_debug;
 
-public class Salesperson extends Employee // Added extends Employee
+public class Salesperson extends Employee // Added extends Employee, can now inherit methods/variables from Employee class
 {
 	private double weeklySales;
 	private double commissionPercentage;
@@ -20,7 +20,8 @@ public class Salesperson extends Employee // Added extends Employee
 	
 	public Salesperson(String name, int hoursWorked, double hourlyRate, double weeklySales, double commissionPercentage)
 	{
-		super(name, hoursWorked, hourlyRate); // Added Super
+		super(name, hoursWorked, hourlyRate); // Added Super, constructor now has calls the constructor in the employee class
+		// Constructor Chaining
 		this.weeklySales = weeklySales;
 		this.commissionPercentage = commissionPercentage;
 	}

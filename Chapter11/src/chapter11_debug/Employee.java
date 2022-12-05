@@ -1,7 +1,7 @@
 /*
- *  Your name here
- * Chapter 11, Lab 2
- * Current date here
+ * David Garrett
+ * Chapter 11 Lab 2
+ * 12-4-22
  */
 
 package chapter11_debug;

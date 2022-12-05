@@ -1,3 +1,9 @@
+/*
+ * David Garrett
+ * Chapter 11 Lab 1
+ * 12-4-22
+ */
+
 package chapter11;
 
 import java.util.ArrayList;
@@ -5,13 +11,16 @@ import java.util.Arrays;
 
 public class StoredItem 
 {
+	// Protected lets secureStoredItem be able to access the variables
+	
 	protected char storageType;
 	protected int volume;
 	protected double cost;
-	protected int prices[][];
+	protected int prices[][]; // Two dimensional array contains all the prices
 
 	public StoredItem() {}
 	
+	// Constructor 
 	public StoredItem(char storage, int volume, int prices[][])
 	{
 		if (storage == 'o' | storage == 'i' | storage == 'r')
@@ -24,10 +33,11 @@ public class StoredItem
 		else
 			setVolume(0);
 		
-		setPrices(prices);
+		setPrices(prices); // Two dimensional array contains all the prices
 		setCost(0);
 	}
 	
+	// Mutators/Accessors
 	public char getStorageType() {
 		return storageType;
 	}
@@ -55,6 +65,7 @@ public class StoredItem
 		this.prices = prices;
 	}
 	
+	// Calculate the cost
 	public void calculateCost()
 	{
 		int indexStorage;
@@ -64,7 +75,10 @@ public class StoredItem
 		ArrayList<Character> storageTypeList = new ArrayList<>(Arrays.asList(storageCharacterArray));
 		ArrayList<Integer> volumeList = new ArrayList<>(Arrays.asList(volumeIntegerArray));
 		
+		// Determine index value of the kind of storage type
 		indexStorage = storageTypeList.indexOf(storageType);
+		
+		// Determines index value of which range of volume the container is in
 		
 		if (volume == 2)
 		{
@@ -81,9 +95,12 @@ public class StoredItem
 			}
 		}
 		
+		// Determines cost using the appropriate index values
 		cost = prices[indexVolume][indexStorage];
 	}
 
+	// returns default string without having to add .toString() to object name
+	// String contains storage type, volume, and cost
 	public String toString()
 	{
 		return "Storage Type:   " + this.getStorageType() + "\nVolume:         " 
